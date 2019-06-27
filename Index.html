@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+
+        <header>
+            <img class="logo" src="Bookshop%20Logo%20Lettering.jpg">
+            <div class="search-wrapper">
+                <input type="text" v-model="search" placeholder="Search library.." />
+                <label>Search library:</label>
+            </div>
+        </header>
+
+        <div class="container">
+            <div id="bookCase" class="books">
+                <div v-for="item in filteredList">
+                    <div class="flip-card" id="flipCard">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img class="covers" v-bind:src="item.cover" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <h6 class="card-title">{{ item.title }}</h6>
+                                <p class="card-text">{{ item.description }}</p>
+                                <p class="card-text">Language: {{ item.language }}</p>
+                                <a v-bind:href="item.detail" data-fancybox="gallery"><button type="button" class="btn btn-primary">More info</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body></html>
