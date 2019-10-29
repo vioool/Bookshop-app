@@ -5,7 +5,7 @@ Just show the books on screen, preferably with a search bar.
 The project must be finished WITHIN 8 HOURS.
 
 REQUIREMENTS:
-• The technologies used will be: HTML, CSS and JavaScript/Vue.js.
+• Used technologies: HTML, CSS and JavaScript/Vue.js.
 • Achieve the flip card effect.
 • The books data are hosted on a remote JSON.
 • Books should be displayed with a little responsive behaviour.
