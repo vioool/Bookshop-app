@@ -29,7 +29,6 @@ var app = new Vue({
 
         },
 
-        //aleways call yourfunction otherwise its stored in a box in he corner, not exposed to any light       
         getCovers: function () {
             this.allCovers = [];
             for (var i = 0; i < this.allBooks.length; i++) {
